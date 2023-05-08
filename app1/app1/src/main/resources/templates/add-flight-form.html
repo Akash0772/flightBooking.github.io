@@ -1,0 +1,58 @@
+<!--  <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Flight</title>
+</head>
+<body>
+    <h1>Add Flight</h1>
+    <form th:object="${flight}" method="post">
+        <label for="flightName">Flight Name:</label>
+        <input type="text" id="flightName" th:field="*{flightName}">
+        <br>
+        <label for="source">Source:</label>
+        <input type="text" id="source" th:field="*{source}">
+        <br>
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" th:field="*{destination}">
+        <br>
+        <label for="availability">Availability:</label>
+        <input type="number" id="availability" th:field="*{availability}">
+        <br>
+        <input type="submit" value="Add Flight">
+    </form>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Sheet and Price for Flight</title>
+</head>
+<body>
+    <h1>Add Sheet and Price for Flight</h1>
+    <form th:action="@{/admin/addSheetAndPrice}" th:object="${flight}" method="post">
+        <input type="hidden" th:field="*{id}">
+        <label for="flightName">Flight Name:</label>
+        <input type="text" id="flightName" th:field="*{flightName}">
+        <br>
+        <label for="source">Source:</label>
+        <input type="text" id="source" th:field="*{source}">
+        <br>
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" th:field="*{destination}">
+        <br>
+        <label for="availability">Availability:</label>
+        <input type="number" id="availability" th:field="*{availability}">
+        <br>
+        <label for="sheet">Sheet:</label>
+        <input type="number" id="sheet" th:field="*{sheet}">
+        <br>
+        <label for="price">Price:</label>
+        <input type="number" step="0.01" id="price" th:field="*{price}">
+        <br>
+        <input type="submit" value="Add Sheet and Price">
+    </form>
+</body>
+</html>
